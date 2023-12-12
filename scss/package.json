@@ -1,0 +1,17 @@
+{
+  "name": "primo_sass_package",
+  "version": "1.0.0",
+  "description": "primo pacchetto",
+  "main": "index.js",
+  "scripts": {
+    "test": "67"
+  },
+  "keywords": [
+    "primopacchetto"
+  ],
+  "author": "Simone Tonti",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
