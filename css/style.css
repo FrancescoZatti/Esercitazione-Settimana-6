@@ -1,4 +1,68 @@
 @charset "UTF-8";
+a:hover {
+  font-weight: 500;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: #212529;
+  background: linear-gradient(0deg, rgba(33, 37, 41, 0.3) 0%, rgb(33, 37, 41) 80%);
+  border-bottom: solid 0.1rem #FE7F00;
+  z-index: 3;
+}
+
+#carouselExampleSlidesOnly {
+  width: 70%;
+  margin: auto;
+  border: solid 0.1rem #FE7F00;
+  border-top: 0;
+}
+
+.carousel-caption {
+  background-color: #fff;
+  border-radius: 3rem;
+  border: solid 0.2rem #FE7F00;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(33, 37, 41, 0.5);
+}
+.carousel-caption h5, .carousel-caption .h5 {
+  color: #FE7F00;
+}
+.carousel-caption:hover {
+  background-color: #fff5e1;
+  border: solid 0.2rem #FFBA39;
+}
+.carousel-caption:hover h5, .carousel-caption:hover .h5 {
+  color: #FFBA39;
+}
+
+.card {
+  background-color: #212529;
+}
+.card img {
+  background-color: #212529;
+}
+.card .card-body {
+  background-color: #212529;
+}
+.card .card-body .card-text {
+  color: #fff;
+}
+.card .card-footer {
+  background-color: #212529;
+}
+.card .card-footer small, .card .card-footer .small {
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors

@@ -6,7 +6,72 @@
 //Fine modifiche funzioni
 
 //Modifiche variabili
+a {
+    &:hover {
+    font-weight: 500;
+}
+}
 
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(8px);
+    background: #212529;
+    background: linear-gradient(0deg, rgb(33, 37, 41, 0.3) 0%, rgb(33, 37, 41, 1) 80%);
+    border-bottom: solid 0.1rem #FE7F00;
+    z-index: 3;
+}
+
+#carouselExampleSlidesOnly {
+    width: 70%;
+    margin: auto;
+    border: solid 0.1rem #FE7F00;
+    border-top: 0;
+}
+
+.carousel-caption {
+    background-color: #fff;
+    border-radius: 3rem;
+    border: solid 0.2rem #FE7F00;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgb(33, 37, 41, 0.5);
+    h5 {
+        color: #FE7F00;
+    }
+    &:hover {
+        background-color: #fff5e1;
+        border: solid 0.2rem #FFBA39;
+        h5 {
+            color: #FFBA39;
+        }
+    }
+}
+
+.card {
+    background-color: #212529;
+    img {
+        background-color: #212529;
+    }
+    
+    .card-body {
+        background-color: #212529;
+        .card-text {
+        color: #fff;
+    }
+    }
+    .card-footer {
+        background-color: #212529;
+        small {
+            color: #fff;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 //Fine modifiche variabili
 
 @import '../Bootstrap/bootstrap-5.3.2/scss/bootstrap.scss';
