@@ -78,14 +78,20 @@ footer {
     h1 {
         width: 60%;
     }
-    form {
+    div {
         display: flex;
         flex-direction: column;
         width: 40%;
+        position: relative;
         .add-item {
             border-radius: 0.5rem;
             padding-left: 1rem;
         }
+    }
+    .buttonGroup {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
     }
 }
 //Fine modifiche variabili

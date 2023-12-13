@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         createProductCards();
     }
     getData(endpoint);
-    createProductCards();
     if (window.location.pathname.includes('backoffice.html')) {
         document.querySelector("#addItem").addEventListener('click', () => {addNewProductCard()});
     }
@@ -86,11 +85,11 @@ function createProductCards() {
                 <div class="col">
                     <div class="card h-100 border border-warning">
                         <img src="${element.imageUrl}" class="card-img-top" alt="${element.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${element.name}</h5>
-                            <p class="card-text">${element.description}</p>
-                            <p class="card-text">${element.brand}</p>
-                            <p class="card-text">${element.price}</p>
+                        <div class="card-body p-0">
+                            <p class="nameClass card-title fs-3 text-white fw-semibold border-bottom border-warning p-2 mb-0">${element.name}</p>
+                            <p class="descriptionClass card-text">${element.description}</p>
+                            <p class="brandClass card-text text-secondary">${element.brand}</p>
+                            <p class="priceClass card-text fs-4 text-warning">€ ${element.price}</p>
                         </div>
                       </div>
                 </div>`;
@@ -98,3 +97,32 @@ function createProductCards() {
         }))
         .catch(err => console.log(err));
 }
+
+document.querySelector("#removeAll").addEventListener('click', () => {
+    let idArray = [];
+  
+    fetch(endpoint, {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4NWQ0MDI2NzYxNDAwMTgzYzJlYWUiLCJpYXQiOjE3MDIzODcwMDgsImV4cCI6MTcwMzU5NjYwOH0.SPYZWut_nYM6_QUQL0K48jcLKa_yNjMjAv5fVRXKS6g"
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        idArray = data.map(item => item._id);
+  
+        idArray.forEach(id => {
+          fetch(`${endpoint}/${id}`, {
+            method: "DELETE",
+            headers: {
+              Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4NWQ0MDI2NzYxNDAwMTgzYzJlYWUiLCJpYXQiOjE3MDIzODcwMDgsImV4cCI6MTcwMzU5NjYwOH0.SPYZWut_nYM6_QUQL0K48jcLKa_yNjMjAv5fVRXKS6g"
+            }
+          })
+            .then(response => response)
+            .catch(err => console.log(err));
+        });
+  
+        idArray = [];
+      })
+      .catch(err => console.log(err));
+  });

@@ -69,14 +69,20 @@ footer {
 #form_addItem h1, #form_addItem .h1 {
   width: 60%;
 }
-#form_addItem form {
+#form_addItem div {
   display: flex;
   flex-direction: column;
   width: 40%;
+  position: relative;
 }
-#form_addItem form .add-item {
+#form_addItem div .add-item {
   border-radius: 0.5rem;
   padding-left: 1rem;
+}
+#form_addItem .buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 
 /*!
