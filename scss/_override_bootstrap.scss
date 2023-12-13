@@ -72,6 +72,22 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+#form_addItem {
+    flex-direction: column;
+    h1 {
+        width: 60%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        .add-item {
+            border-radius: 0.5rem;
+            padding-left: 1rem;
+        }
+    }
+}
 //Fine modifiche variabili
 
 @import '../Bootstrap/bootstrap-5.3.2/scss/bootstrap.scss';

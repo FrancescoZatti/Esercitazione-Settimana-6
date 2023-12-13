@@ -63,6 +63,22 @@ footer {
   justify-content: center;
 }
 
+#form_addItem {
+  flex-direction: column;
+}
+#form_addItem h1, #form_addItem .h1 {
+  width: 60%;
+}
+#form_addItem form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+#form_addItem form .add-item {
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
