@@ -14,7 +14,7 @@ header {
 }
 
 #carouselExampleSlidesOnly {
-  width: 70%;
+  width: auto;
   margin: auto;
   border: solid 0.1rem #FE7F00;
   border-top: 0;
@@ -83,6 +83,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: right;
+}
+
+#productImg {
+  border-right: solid 0.1rem #FE7F00;
 }
 
 /*!

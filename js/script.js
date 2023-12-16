@@ -98,7 +98,7 @@ function createProductCards() {
         .catch(err => console.log(err));
 }
 
-document.querySelector("#removeAll").addEventListener('click', () => {
+document.getElementById("removeAll").addEventListener('click', () => {
     let idArray = [];
   
     fetch(endpoint, {
@@ -126,3 +126,12 @@ document.querySelector("#removeAll").addEventListener('click', () => {
       })
       .catch(err => console.log(err));
   });
+
+  document.getElementById("clearButton").addEventListener("click", clearForm);
+
+  function clearForm() {
+    const inputs = document.getElementsByClassName("add-item");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
+    }
+  }
